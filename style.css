@@ -139,7 +139,7 @@ header {
 }
 .form-container{
     height: 50px;
-    width: 250px;
+    width: 300px;
     background: var(--color-grey-transparent);
     border-radius: 10px;
     cursor: pointer;
