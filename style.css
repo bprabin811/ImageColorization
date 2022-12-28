@@ -187,4 +187,7 @@ footer p{
     .row-2 img{
         width: 100%;
     }
+    .form-container{
+    height: 100px;
+    }
 }
