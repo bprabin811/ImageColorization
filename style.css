@@ -125,7 +125,8 @@ header {
 }
 .row-2 img{
     width: 80%;
-    animation: anim 5s linear infinite;
+    /* height: 80%; */
+    background-size: contain;
     border-radius: 10px;
 }
 .row-2 button{
@@ -142,6 +143,11 @@ header {
 }
 .row-2 button:hover{
     background: var(--color-secondary);
+}
+.row-2 #theme {
+  width: 80%;
+  animation: anim 5s linear infinite;
+  border-radius: 10px;
 }
 @keyframes anim {
     from{
@@ -208,6 +214,9 @@ height: 445px;
     .col-2 .row-2{
         width: 80vw;
         height: 40vh;
+    }
+    .row-2 #theme {
+    width: 100%;
     }
     .row-2 img{
         width: 100%;
