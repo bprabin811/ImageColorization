@@ -86,11 +86,11 @@ header {
     align-items: center;
 }
 .col-2{
-    height: 50vh;
+    margin: 20px 0;
     /* background-color: aqua; */
 }
 .row-2{
-    height: 60vh;
+    margin: 10px;
     width: 40vw;
     /* border: 2px solid red; */
     display: flex;
@@ -103,9 +103,25 @@ header {
     text-align: center;
 }
 .row-2 span{
-    font-size: 4rem;
-    font-family: cursive;
+    font-size: 3rem;
     color: var(--color-primary);
+    animation: myanim;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    border-radius: 5px;
+    border: 1px solid var(--color-grey-transparent);
+}
+@keyframes myanim {
+  from {
+    color: black;
+    background-color: white;
+  }
+  to {
+    color: white;
+    background-color: black;
+  }
 }
 .row-2 img{
     width: 80%;
@@ -157,18 +173,27 @@ footer p{
     font-size: 12px;
     
 }
+#nav-toggle{
+  display: none;
+}
+header.expanded {
+height: 445px;
+}
 
 @media screen and (min-width: 200px) and (max-width: 680px) {
     header {
-        height: 50vh;
+       height: 125px;
+        padding: 10px;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: start;
         border-radius: 0 0 20px 20px;
+        transition: 0.5s ease-in-out;
     }
 
     .left-header nav ul {
         display: flex;
         flex-direction: column;
+        transition: 0.5s ease-in-out;
     }
 
     .left-header nav ul li {
@@ -176,7 +201,7 @@ footer p{
     }
 
     .col-2{
-        height: 60vh;
+        margin: 25px 0;
         display: flex;
         flex-direction: column;
     }
@@ -190,4 +215,23 @@ footer p{
     .form-container{
     height: 100px;
     }
+    #nav-list {
+    display: none;
+    /* align-items: center;
+    justify-content: center; */
+  }
+  #nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    background: var(--color-primary);
+    position: relative;
+    left: 0;
+    top: 30%;
+    transition: 0.5s ease-out;
+  }
 }
